@@ -48,7 +48,7 @@ function App() {
       <div id="button-holder"><button onClick={handleClick} id="bob"> RESET MAP </button></div>
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forcast && <Forecast data={forcast} />}
-      {showMap && <MapLoc mapKey={mapKey} latit={lat} longit={long} />}
+      {showMap && <MapLoc latit={lat} longit={long} />}
 
 
 

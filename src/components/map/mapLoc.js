@@ -12,7 +12,7 @@ const MapLoc = (props) => {
     return (
         
         <>
-        <Map key={props.mapKey} height={500} defaultCenter={[props.latit, props.longit]} defaultZoom={12}
+        <Map height={500} defaultCenter={[props.latit, props.longit]} defaultZoom={12}
         >
             <Marker width={50} color={"red"} anchor={[props.latit, props.longit]} />
         </Map>
