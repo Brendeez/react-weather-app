@@ -2,3 +2,12 @@
   max-width:  1080px;
   margin: 20px auto;
 }
+
+#bob{
+  background-color: blueviolet;
+}
+
+#button-holder{
+  display: flex;
+  justify-content: center;
+}
