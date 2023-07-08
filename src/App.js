@@ -29,23 +29,27 @@ function App() {
 
     //console.log(currentWeather);
     //console.log(forcast);
-    setshowMap(true);
+    setshowMap(false);
+    setTimeout(() => {
+      console.log("After delay");
+      setshowMap(true);
+    }, 1000); // Delay of 1000 milliseconds (1 second)
+    
     setLong(Number(lon));
     setLat(Number(lat));
     MapLoc([lat, long]);
 
   }
 
-  const handleClick = () => {
-    setshowMap(false);
-  };
+  //const handleClick = () => {
+  //  setshowMap(false);
+  //};
 
 
   return (
     <div className="container">
 
       <Search onSearchChange={handleOnSearchChange} />
-      <div id="button-holder"><button onClick={handleClick} id="bob"> RESET MAP </button></div>
       {currentWeather && <CurrentWeather data={currentWeather} />}
       {forcast && <Forecast data={forcast} />}
       {showMap && <MapLoc latit={lat} longit={long} />}
